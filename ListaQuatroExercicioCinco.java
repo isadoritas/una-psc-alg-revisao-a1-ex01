@@ -11,7 +11,6 @@ public class ListaQuatroExercicioCinco {
 
         System.out.println("Informe o seu nome:");
         String nome = scanner.nextLine();
-        probInfeccao = 0;
         porcentagemAcumulada = 0;
 
         System.out.println("\nInforme a sua idade:");
@@ -19,7 +18,6 @@ public class ListaQuatroExercicioCinco {
        
 
         System.out.println("\nResponda SIM ou NAO para as perguntas abaixo:");
-
         tentativas = 0;
        
         do {
@@ -90,6 +88,13 @@ public class ListaQuatroExercicioCinco {
         }
 
     } while(!viagem.equalsIgnoreCase("SIM") && !viagem.equalsIgnoreCase("NAO"));
+    
+    System.out.println("\nNome: " + nome);
+    System.out.println("Idade: " + idade);
+    System.out.println("O cartão de vacina está em dia: " + estaEmDia);
+    System.out.println("Teve sintomas recentemente: " + sintomas);
+    System.out.println("Teve contato com pessoas infectadas: " + contato);
+    System.out.println("Está retornando de viagem: " + viagem);
 
     if(porcentagemAcumulada <= 30) {
         System.out.println("\n\t(A probabiblidade de você estar infectado é de " + porcentagemAcumulada + "% ): ");
@@ -105,7 +110,7 @@ public class ListaQuatroExercicioCinco {
         System.out.println("\n\t(A probabilidade de você estar infectado é de " + porcentagemAcumulada + "% ):");
         System.out.println("\nPaciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado");
         
-        scanner.close();
+         scanner.close();
     }    
 }
 }
